@@ -1,1 +1,32 @@
-<h1>Welcome Buddy</h1>
+<app-nav-bar> </app-nav-bar>
+<header>
+  <div class="container" style="margin-top: 140px">
+    <h1>Welcome Buddy {{ title }}</h1>
+  </div>
+  <ul class="custom-card">
+    <li class="list-unstyled" *ngFor="let product of products">
+      <div class="card" style="width: 18rem">
+        <h6 class="card-img-top">{{ product.pictureUrl }}</h6>
+        <div class="card-body">
+          <h6 class="card-title">{{ product.name }}</h6>
+          <h6 class="card-text">{{ product.description }}</h6>
+          <p class="card-text">{{ product.productType }}</p>
+          <h6>{{ product.price }}</h6>
+          <a href="#" class="btn btn-primary">{{ product.prductBrand }}</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="card" style="width: 18rem">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</header>
