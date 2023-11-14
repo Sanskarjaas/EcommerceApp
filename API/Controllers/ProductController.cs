@@ -7,10 +7,8 @@ using AutoMapper;
 using Core.Entities;
 using Core.Intefaces;
 using Core.Specifications;
-using Infrastructure.Data;
-using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace API.Controllers
 {
