@@ -1,6 +1,6 @@
 using Core.Entities;
 using Core.Intefaces;
-using Core.Specification;
+using Core.Specifications;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
@@ -9,8 +9,13 @@ namespace Infrastructure.Data
     {
         private readonly StoreContext _context;
         public GenericRepository(StoreContext context)
+
         {
             _context = context;
+        }
+        public void Add(T entity)
+        {
+            _context.Set<T>().Add(entity);
         }
         public async Task<T> GetByIdAsync(int id)
         {
@@ -32,6 +37,19 @@ namespace Infrastructure.Data
         private IQueryable<T> ApplySpecification(ISpecification<T> spec)
         {
             return SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
+        }
+
+        public async Task<int> CountAsync(ISpecification<T> spec)
+        {
+            return await ApplySpecification(spec).CountAsync();
+        }
+        public void Update(T entity)
+        {
+            throw new NotImplementedException();
+        }
+        public void Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
         }
     }
 }
