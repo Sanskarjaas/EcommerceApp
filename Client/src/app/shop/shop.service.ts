@@ -8,7 +8,7 @@ import { Type } from '../shared/models/type';
 @Injectable({
 
   providedIn: 'root'
-  
+
 })
 
 export class ShopService {
@@ -23,7 +23,7 @@ export class ShopService {
   getTypes(){
     return this.http.get<Type[]>(this.baseUrl+'product/types');  
   }
-  getProducts(){
-    return this.http.get<Product[]>(this.baseUrl+'product');
-  }
+  // getProducts(){
+  //   return this.http.get<Product[]>(this.baseUrl+'product');
+  // }
 }
