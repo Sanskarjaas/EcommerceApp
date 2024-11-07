@@ -64,9 +64,7 @@ Handles data access using **Entity Framework Core** to interact with the **MSSQL
 
 5.**Open Swagger at https://localhost:<port>/swagger to interact with and test the API**.
 
-    API Endpoints
-        1. GET /api/products
-        Fetches a list of all products with optional search and pagination.
+ 
 
 # Query Parameters:
 
