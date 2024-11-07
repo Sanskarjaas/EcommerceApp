@@ -63,17 +63,18 @@ Handles data access using **Entity Framework Core** to interact with the **MSSQL
     Build and Run the API:
 
 5.**Open Swagger at https://localhost:<port>/swagger to interact with and test the API**.
-API Endpoints
-1. GET /api/products
-Fetches a list of all products with optional search and pagination.
+
+    API Endpoints
+        1. GET /api/products
+        Fetches a list of all products with optional search and pagination.
 
 # Query Parameters:
 
-brand: Filter by product brand.
-type: Filter by product type.
-name: Filter by product name.
-page: The page number for pagination.
-pageSize: Number of products per page (default is 10).
+    brand: Filter by product brand.
+    type: Filter by product type.
+    name: Filter by product name.
+    page: The page number for pagination.
+    pageSize: Number of products per page (default is 10).
 
 
 <a href="https://github.com/Sanskarjaas">GitHub --SanskarJaiswal--</a>
