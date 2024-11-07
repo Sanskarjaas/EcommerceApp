@@ -58,80 +58,23 @@ Handles data access using **Entity Framework Core** to interact with the **MSSQL
    ```bash
    dotnet restore
 
-Run Migrations (if applicable):
+4. **Run Migrations **:
+    dotnet ef database update
+    Build and Run the API:
 
-In the Infrastructure project, run the migrations to create the necessary database tables.
-bash
-Copy code
-dotnet ef database update
-Build and Run the API:
-
-Open the solution in Visual Studio or use the following command to run the API.
-bash
-Copy code
-dotnet run
-Test the API:
-
-Open Swagger at https://localhost:<port>/swagger to interact with and test the API.
+5.**Open Swagger at https://localhost:<port>/swagger to interact with and test the API**.
 API Endpoints
 1. GET /api/products
 Fetches a list of all products with optional search and pagination.
 
-Query Parameters:
+# Query Parameters:
 
 brand: Filter by product brand.
 type: Filter by product type.
 name: Filter by product name.
 page: The page number for pagination.
 pageSize: Number of products per page (default is 10).
-Response:
 
-A paginated list of products.
-2. POST /api/products
-Adds a new product to the database.
-
-Request Body:
-
-name: Name of the product.
-brand: Brand of the product.
-type: Type/category of the product.
-price: Price of the product.
-Response:
-
-The created product object.
-3. PUT /api/products/{id}
-Updates an existing product by ID.
-
-Request Body:
-
-name: Name of the product.
-brand: Brand of the product.
-type: Type/category of the product.
-price: Price of the product.
-Response:
-
-The updated product object.
-4. DELETE /api/products/{id}
-Deletes a product by ID.
-
-Response:
-
-A success message indicating the product was deleted.
-Error Handling
-The API returns appropriate HTTP status codes for errors:
-
-400 Bad Request for invalid data.
-404 Not Found if a product is not found.
-500 Internal Server Error for unhandled errors.
-Pagination
-The API supports pagination for fetching product lists. The page and pageSize query parameters allow the user to control the pagination.
-
-Example: GET /api/products?page=2&pageSize=10
-
-
-
-
-   
 
 <a href="https://github.com/Sanskarjaas">GitHub --SanskarJaiswal--</a>
 
